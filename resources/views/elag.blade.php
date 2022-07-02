@@ -15,10 +15,13 @@
     <link rel="shortcut icon" type="image/x-icon" href="">
     <!-- Place favicon.ico in the root directory -->
 
-   
+
 </head>
 
 <body>
+    @php
+       $user =app\user::find(auth()->id()) ;
+    @endphp
     <div class="bradcam_area breadcam_bg_1 overlay d-flex align-items-center justify-content-center">
         <div class="container">
             <div class="row">
@@ -48,17 +51,25 @@
                                 <table class="table">
                                         <thead>
                                                 <tr>
+                                                    <th scope="col">  اسم الطفل  </th>
+                                                    <th scope="col">  عمر الطفل  </th>
+                                                    <th scope="col">  اسم الوالد  </th>
+                                                    <th scope="col"> اسم الدكتور </th>
                                                     <th scope="col">مجموع التفاعل الأجتماعي </th>
                                                     <th scope="col">مجموع التواصل </th>
                                                     <th scope="col">مجموع السلوكيات النمطيه </th>
                                                     <th scope="col">مجموع اضطرابات النمو </th>
                                                     <th scope="col"> المجموع الكلي   </th>
                                                     <th scope="col">نسبة التوحد  </th>
-                                                
+
                                                 </tr>
                                         </thead>
                                          <tbody>
                                                 <tr>
+                                                    <td >{{ $user->child_name }}</td>
+                                                    <td >{{ $user->child_age }}</td>
+                                                    <td >{{ $user->name }}</td>
+                                                    <td >{{ $user->	tester_name }}</td>
                                                     <td >{{ $interaction  }}</td>
                                                     <td>{{ $communication  }}</td>
                                                     <td>{{ $behaviors }}</td>
@@ -66,13 +77,13 @@
                                                     <td>{{ $total }}</td>
                                                     <td>
                                                         @if($total >= 121)
-                                                        <h4> شديدة </h4>  
-                                                        @elseif($total >= 90 && $total < 121) 
+                                                        <h4> شديدة </h4>
+                                                        @elseif($total >= 90 && $total < 121)
                                                         <h4>   متوسطه</h4>
-                                                        @elseif($total >= 69 && $total < 90) 
+                                                        @elseif($total >= 69 && $total < 90)
                                                         <h4>  منخفضة </h4>
-                                                        @elseif($total < 69) 
-                                                        <h4>  منخفضة جدا</h4> 
+                                                        @elseif($total < 69)
+                                                        <h4>  منخفضة جدا</h4>
                                                         @endif
                                                     </td>
                                                 </tr>
@@ -81,14 +92,16 @@
                                       </div>
                                   </div>
                                 </div>
+
                     </div>
+                    <button type="button" class="btn btn-success" onclick="window.print()"> طباعه </button>
                 </div>
             </div>
         </div>
     </div>
 
 
-   
+
 </body>
 
 </html>

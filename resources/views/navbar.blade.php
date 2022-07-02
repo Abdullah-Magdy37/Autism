@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="{{asset('css/animate.css')}}">
     <link rel="stylesheet" href="{{asset('css/slicknav.css')}}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
-    <link rel="stylesheet" href="{{asset('css/responsive.css')}}"> 
+    <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
 </head>
 <body>
 
@@ -38,10 +38,10 @@
 
 
 
-	
+
     <header>
-        
-        
+
+
         <div class="header-area ">
             <div id="sticky-header" class="main-header-area">
                 <div class="container-fluid">
@@ -53,30 +53,30 @@
                                         <li><a href="index">الصفحة الرئيسية</a></li>
                                         <li><a href="autism">عن التوحد</a></li>
                                         <li><a href="about">عن الموقع</a></li>
-                                        @guest  
-                                        <li><a href="register">انشاء حساب</a></li> 
+                                        @guest
+                                        <li><a href="register">انشاء حساب</a></li>
                                         <li>  <a  href="login">تسجيل الدخول</a>  </li>
                                        @endguest
-                                     
-                                      
+
+
                                        @auth
                                        {{-- <li><a href="elag">نسبة التوحد </a></li> --}}
                                        <li>
                                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                             {{ Auth::user()->name }} <span class="caret"></span>
                                         </a>
-        
+
                                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                             <a  href="{{ route('logout') }}"
                                                onclick="event.preventDefault();
                                                              document.getElementById('logout-form').submit();">
-                                               تسجيل خروج 
+                                               تسجيل خروج
                                             </a>
-        
+
                                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                                 @csrf
                                             </form>
-                                            
+
                                         </div>
                                     </li>
                                        @endauth
@@ -84,10 +84,10 @@
                                 </nav>
                                 <div class="Appointment">
                                     <div class="book_btn d-none d-lg-block">
-                                      
-                                      
-                                     
-                                       
+
+
+
+
                                     </div>
                                 </div>
                             </div>
@@ -104,10 +104,10 @@
                 </div>
             </div>
         </div>
-      
-      
+
+
     </header>
-  
+
     <!-- header-end -->
     <!-- footer_start  -->
     <footer class="footer">
@@ -121,21 +121,21 @@
                                     <img src="" alt="">
                                 </a>
                             </div>
-                            <p class="address_text text-right">كن معي في عالمي <br>التدخل المبكر يمكن أن يحسن مهارات التعلم والتواصل والمهارات الاجتماعية 
+                            <p class="address_text text-right">كن معي في عالمي <br>التدخل المبكر يمكن أن يحسن مهارات التعلم والتواصل والمهارات الاجتماعية
                             </p>
                         </div>
                     </div>
                     <div class="col-xl-2 col-md-6 col-lg-4">
                         <div class="footer_widget">
                             <h3 class="footer_title text-right">
-                                تنقل سريع 
+                                تنقل سريع
                             </h3>
                             <ul class="links text-right">
                                 <li><a href="index">الصفحة الرئيسية</a></li>
                                 <li><a href="autism">عن التوحد</a></li>
                                 <li><a href="about">عن الموقع</a></li>
                             
-                                
+
                             </ul>
                         </div>
                     </div>
