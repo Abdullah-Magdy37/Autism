@@ -60,7 +60,7 @@
 
 
                                        @auth
-                                       {{-- <li><a href="elag">نسبة التوحد </a></li> --}}
+                                       <li><a href="elag">نسبة التوحد </a></li>
                                        <li>
                                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                             {{ Auth::user()->name }} <span class="caret"></span>
@@ -134,12 +134,13 @@
                                 <li><a href="index">الصفحة الرئيسية</a></li>
                                 <li><a href="autism">عن التوحد</a></li>
                                 <li><a href="about">عن الموقع</a></li>
-                            
+
 
                             </ul>
                         </div>
                     </div>
                 </div>
+                               <p style="text-align: center"> Developed By Abdullah Magdy &copy; 2022 </p>
             </div>
         </div>
     </footer>
